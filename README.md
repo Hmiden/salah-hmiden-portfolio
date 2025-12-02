@@ -82,11 +82,8 @@
         padding-left: 20px;
     }
 
-</style>
-</head>
 
-<body>
-<div class="container">
+
 
     <h1>🚀 Salah Hmiden — Cloud & DevOps Engineering Student</h1>
 
