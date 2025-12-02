@@ -1,316 +1,223 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Salah Hmiden — Cloud & DevOps</title>
+<meta charset="UTF-8">
+<title>Salah Hmiden — Cloud & DevOps Engineering Student</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Optionnel : Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg: #0f1724;
-      --card: #0b1220;
-      --muted: #98a0b3;
-      --accent: #60a5fa;
-      --accent-2: #7dd3fc;
-      --text: #e6eef8;
-      --glass: rgba(255,255,255,0.03);
-      --radius: 12px;
-      --max-width: 900px;
-      --gap: 1rem;
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        background: #f4f6fa;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
     }
 
-    /* Light mode support */
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg: #f5f7fb;
-        --card: #ffffff;
-        --muted: #6b7280;
-        --accent: #2563eb;
-        --accent-2: #06b6d4;
-        --text: #0b1220;
-        --glass: rgba(10,10,10,0.03);
-      }
+    .container {
+        width: 900px;
+        background: white;
+        margin: 30px;
+        padding: 40px;
+        border-radius: 14px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        border: 1px solid #e4e7ec;
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 80%, transparent 20%));
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:2rem;
+    h1 {
+        text-align: center;
+        font-weight: 700;
+        color: #0d1b2a;
+        margin-bottom: 10px;
     }
 
-    .card{
-      width:100%;
-      max-width:var(--max-width);
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-      border-radius:var(--radius);
-      padding:1.6rem;
-      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
-      border: 1px solid rgba(255,255,255,0.03);
+    p, li {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
     }
 
-    header{
-      text-align:center;
-      margin-bottom:1rem;
+    a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
     }
 
-    h1{
-      margin:0;
-      font-size:1.35rem;
-      letter-spacing:-0.2px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:0.6rem;
-      flex-wrap:wrap;
+    a:hover {
+        text-decoration: underline;
     }
 
-    .subline{
-      margin-top:0.45rem;
-      color:var(--muted);
-      font-size:0.95rem;
+    hr {
+        border: 0;
+        height: 1px;
+        background: #d8dbe2;
+        margin: 30px 0;
     }
 
-    .meta a{
-      color:var(--accent);
-      text-decoration:none;
-    }
-    .meta a:hover{ text-decoration:underline; color:var(--accent-2) }
-
-    hr.separator{
-      border:0;
-      height:1px;
-      background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.03), rgba(255,255,255,0));
-      margin:1.2rem 0;
-      border-radius:4px;
+    h2 {
+        color: #1b263b;
+        margin-top: 40px;
+        font-size: 24px;
+        border-left: 6px solid #4da3ff;
+        padding-left: 12px;
+        font-weight: 700;
     }
 
-    section{
-      margin-bottom:1rem;
+    h3 {
+        color: #1b263b;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 600;
     }
 
-    .about{
-      line-height:1.55;
-      color:var(--text);
-      font-size:0.98rem;
+    .center {
+        text-align: center;
+        font-weight: 600;
+        color: #4f5d75;
     }
 
-    .grid-2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:var(--gap);
+    ul {
+        margin-top: 10px;
+        padding-left: 20px;
     }
 
-    /* Skills list */
-    .skills{
-      display:flex;
-      flex-direction:column;
-      gap:0.6rem;
-    }
-
-    .skill-title{
-      font-weight:600;
-      font-size:0.98rem;
-      margin-bottom:0.25rem;
-    }
-
-    ul.tech{
-      margin:0;
-      padding-left:1.1rem;
-      color:var(--muted);
-      line-height:1.6;
-    }
-
-    /* Projects */
-    .projects{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:0.8rem;
-    }
-    .project{
-      background:var(--glass);
-      border-radius:10px;
-      padding:0.8rem;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-    .project b{display:block; margin-bottom:0.2rem; font-weight:600;}
-    .project .stack{color:var(--muted); font-size:0.92rem; margin-bottom:0.4rem}
-
-    /* Certifications & Contact */
-    .two-col{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:var(--gap);
-    }
-
-    .list{
-      margin:0;
-      padding-left:1.05rem;
-      color:var(--muted);
-      line-height:1.6;
-    }
-
-    footer{
-      text-align:center;
-      margin-top:1rem;
-      color:var(--muted);
-      font-size:0.9rem;
-    }
-
-    /* Small screens */
-    @media (max-width:720px){
-      .grid-2, .two-col{ grid-template-columns: 1fr; }
-      h1{ font-size:1.1rem }
-      .card{ padding:1.1rem }
-    }
-
-    /* Print friendly */
-    @media print{
-      body{background:white; color:black}
-      .card{box-shadow:none; border: none; background:transparent}
-      a::after{ content: " (" attr(href) ")"; color: black; font-size: 10px; }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <article class="card" role="article">
-    <header>
-      <h1>🚀 Salah Hmiden — Cloud & DevOps Engineering Student</h1>
-      <div class="subline meta">📍 Tunis, Tunisia • 📫 <a href="mailto:salah.hmiden@esprit.tn">salah.hmiden@esprit.tn</a> • <a href="https://linkedin.com/in/salah-hmiden" target="_blank" rel="noopener">LinkedIn</a></div>
-    </header>
+<div class="container">
 
-    <hr class="separator">
+    <h1>🚀 Salah Hmiden — Cloud & DevOps Engineering Student</h1>
 
-    <section class="about">
-      <strong>🌟 À propos de moi</strong>
-      <p>Étudiant en <strong>Cloud & DevOps Engineering</strong>, passionné par l’automatisation, l’infrastructure cloud, la conteneurisation et l’observabilité. J’aime construire des plateformes fiables, scalables et monitorées en combinant <strong>CI/CD, Cloud, Docker/Kubernetes et Monitoring avancé</strong>. Actuellement à la recherche d’une <strong>alternance Cloud/DevOps</strong>.</p>
-    </section>
+    <p class="center">
+        📍 Tunis, Tunisia • 📫 salah.hmiden@esprit.tn • 
+        <a href="https://linkedin.com/in/salah-hmiden" target="_blank">🔗 LinkedIn</a>
+    </p>
 
-    <section class="grid-2">
-      <div>
-        <strong>🛠️ Compétences Techniques</strong>
-        <div class="skills">
-          <div>
-            <div class="skill-title">⚙️ DevOps & CI/CD</div>
-            <ul class="tech">
-              <li>Jenkins, GitLab CI/CD, SonarQube, Nexus</li>
-              <li>Pipelines CI/CD & automatisation</li>
-            </ul>
-          </div>
+    <hr>
 
-          <div>
-            <div class="skill-title">☁️ Cloud & Infrastructure</div>
-            <ul class="tech">
-              <li>OpenStack, AWS — Terraform, Ansible</li>
-              <li>Linux, Networking, IaC</li>
-            </ul>
-          </div>
+    <h2>🌟 À propos de moi</h2>
+    <p>
+        Étudiant en <strong>Cloud & DevOps Engineering</strong>, passionné par l’automatisation, l’infrastructure cloud, la
+        conteneurisation et l’observabilité.<br><br>
 
-          <div>
-            <div class="skill-title">🐳 Containers & Orchestration</div>
-            <ul class="tech">
-              <li>Docker, Kubernetes (pods, deployments, services)</li>
-            </ul>
-          </div>
+        J’aime construire des plateformes fiables, scalables et monitorées, en combinant <strong>CI/CD, Cloud,
+        Docker/Kubernetes et Monitoring avancé</strong>.<br><br>
 
-          <div>
-            <div class="skill-title">📊 Monitoring & Observabilité</div>
-            <ul class="tech">
-              <li>Prometheus, Grafana — alerting & logs</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        Je suis actuellement à la recherche d’une <strong>alternance Cloud/DevOps</strong>, afin de contribuer à des projets
+        concrets et développer davantage mes compétences.
+    </p>
 
-      <div>
-        <strong>💻 Développement</strong>
-        <ul class="tech">
-          <li>Java, Spring Boot • Angular</li>
-          <li>Python, Bash • MySQL, SQL</li>
-        </ul>
+    <hr>
 
-        <div style="height:0.6rem"></div>
+    <h2>🛠️ Compétences Techniques</h2>
 
-        <strong>🎓 Certifications</strong>
-        <ul class="list">
-          <li>AWS Cloud Foundations</li>
-          <li>AWS Cloud Operations</li>
-          <li>Jenkins – KodeKloud</li>
-          <li>Scrum Fundamentals</li>
-          <li>CCNA Routing & Switching</li>
-        </ul>
-      </div>
-    </section>
+    <h3>⚙️ DevOps & CI/CD</h3>
+    <ul>
+        <li>Jenkins, GitLab CI/CD</li>
+        <li>SonarQube, Nexus</li>
+        <li>Pipelines CI/CD complets</li>
+        <li>Automatisation : build, test, déploiement</li>
+    </ul>
 
-    <hr class="separator">
+    <h3>☁️ Cloud & Infrastructure</h3>
+    <ul>
+        <li>OpenStack, AWS</li>
+        <li>Terraform, Ansible</li>
+        <li>Linux, Networking</li>
+        <li>Infrastructure as Code (IaC)</li>
+    </ul>
 
-    <section>
-      <strong>🚀 Projets Principaux</strong>
-      <div class="projects" style="margin-top:0.6rem">
-        <div class="project">
-          <b>1️⃣ CI/CD Pipeline End-to-End</b>
-          <div class="stack">Stack : Jenkins, GitLab, Docker, SonarQube, Nexus, Spring Boot, Angular</div>
-          <div>Build automatisé • Analyse qualité • Déploiement Dockerisé • Monitoring via Prometheus & Grafana</div>
-        </div>
+    <h3>🐳 Containers & Orchestration</h3>
+    <ul>
+        <li>Docker, Docker Hub</li>
+        <li>Kubernetes (pods, deployments, services)</li>
+    </ul>
 
-        <div class="project">
-          <b>2️⃣ Monitoring & Observabilité</b>
-          <div class="stack">Stack : Prometheus, Grafana, Docker</div>
-          <div>Dashboards temps réel • Alerting • Supervision CPU/RAM/latence API</div>
-        </div>
+    <h3>📊 Monitoring & Observabilité</h3>
+    <ul>
+        <li>Prometheus</li>
+        <li>Grafana</li>
+        <li>Alerting & logs</li>
+    </ul>
 
-        <div class="project">
-          <b>3️⃣ Cloud Infrastructure Automation — OpenStack</b>
-          <div class="stack">Stack : Terraform, Ansible, OpenStack</div>
-          <div>Provisioning automatique • Déploiement App + DB • Scripts Ansible</div>
-        </div>
+    <h3>💻 Développement</h3>
+    <ul>
+        <li>Java, Spring Boot</li>
+        <li>Angular</li>
+        <li>Python, Bash</li>
+        <li>MySQL, SQL</li>
+    </ul>
 
-        <div class="project">
-          <b>4️⃣ Plateforme Full-Stack Tutoriels</b>
-          <div class="stack">Stack : Spring Boot, Angular, MySQL</div>
-          <div>API REST sécurisée • Dashboard admin • CI/CD GitLab</div>
-        </div>
+    <hr>
 
-        <div class="project">
-          <b>5️⃣ Smart Irrigation System (IoT)</b>
-          <div class="stack">Stack : STM32, LoRa, Python</div>
-          <div>Réduction consommation d’eau • Transmission longue portée • Monitoring</div>
-        </div>
-      </div>
-    </section>
+    <h2>🚀 Projets Principaux</h2>
 
-    <hr class="separator">
+    <h3>1️⃣ CI/CD Pipeline End-to-End</h3>
+    <p><strong>Stack :</strong> Jenkins, GitLab, Docker, SonarQube, Nexus, Spring Boot, Angular</p>
+    <ul>
+        <li>Build automatisé</li>
+        <li>Analyse qualité</li>
+        <li>Déploiement Dockerisé</li>
+        <li>Monitoring complet via Prometheus & Grafana</li>
+        <li>Architecture CI/CD professionnelle</li>
+    </ul>
 
-    <section class="two-col">
-      <div>
-        <strong>📬 Contact</strong>
-        <ul class="list">
-          <li>Email : <a href="mailto:salah.hmiden@esprit.tn">salah.hmiden@esprit.tn</a></li>
-          <li>LinkedIn : <a href="https://linkedin.com/in/salah-hmiden" target="_blank" rel="noopener">linkedin.com/in/salah-hmiden</a></li>
-          <li>GitHub : <a href="https://github.com/Hmiden" target="_blank" rel="noopener">github.com/Hmiden</a></li>
-        </ul>
-      </div>
+    <h3>2️⃣ Monitoring & Observabilité</h3>
+    <p><strong>Stack :</strong> Prometheus, Grafana, Docker</p>
+    <ul>
+        <li>Création de dashboards temps réel</li>
+        <li>Mise en place d’alerting</li>
+        <li>Supervision CPU/RAM/latence API</li>
+    </ul>
 
-      <div>
-        <strong>🔖 Remerciements</strong>
-        <p style="color:var(--muted); margin:0.2rem 0 0 0">✨ Merci pour votre visite !</p>
-      </div>
-    </section>
+    <h3>3️⃣ Cloud Infrastructure Automation — OpenStack</h3>
+    <p><strong>Stack :</strong> Terraform, Ansible, OpenStack</p>
+    <ul>
+        <li>Provisioning automatique</li>
+        <li>Déploiement App + DB</li>
+        <li>Scripts Ansible pour configuration</li>
+    </ul>
 
-    <footer>
-      <small>Fichier généré — Salah Hmiden</small>
-    </footer>
-  </article>
+    <h3>4️⃣ Plateforme Full-Stack Tutoriels</h3>
+    <p><strong>Stack :</strong> Spring Boot, Angular, MySQL</p>
+    <ul>
+        <li>API REST sécurisée</li>
+        <li>Dashboard admin</li>
+        <li>CI/CD GitLab</li>
+    </ul>
+
+    <h3>5️⃣ Smart Irrigation System (IoT)</h3>
+    <p><strong>Stack :</strong> STM32, LoRa, Python</p>
+    <ul>
+        <li>Réduction consommation d’eau</li>
+        <li>Transmission longue portée</li>
+        <li>Monitoring en temps réel</li>
+    </ul>
+
+    <hr>
+
+    <h2>🎓 Certifications</h2>
+    <ul>
+        <li>AWS Cloud Foundations</li>
+        <li>AWS Cloud Operations</li>
+        <li>Jenkins – KodeKloud</li>
+        <li>Scrum Fundamentals</li>
+        <li>CCNA Routing & Switching</li>
+    </ul>
+
+    <hr>
+
+    <h2>📬 Contact</h2>
+    <p>
+        📧 <strong>Email :</strong> salah.hmiden@esprit.tn<br>
+        🔗 <strong>LinkedIn :</strong> https://linkedin.com/in/salah-hmiden<br>
+        💼 <strong>GitHub :</strong> https://github.com/Hmiden
+    </p>
+
+    <p class="center">✨ Merci pour votre visite !</p>
+
+</div>
 </body>
 </html>
