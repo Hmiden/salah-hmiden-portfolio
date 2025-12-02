@@ -1,144 +1,110 @@
-🚀 PORTFOLIO — Salah Hmiden
-Cloud & DevOps Engineering Student — ESPRIT
+<h1 align="center">🚀 Salah Hmiden — Cloud & DevOps Engineering Student</h1>
 
-📍 Tunis, Tunisia • 📧 salah.hmiden@esprit.tn
- • 🔗 linkedin.com/in/salah-hmiden
+<p align="center">
+📍 Tunis, Tunisia • 📫 salah.hmiden@esprit.tn • 
+<a href="https://linkedin.com/in/salah-hmiden" target="_blank">🔗 LinkedIn</a>
+</p>
 
-🔹 À propos de moi
+---
 
-Étudiant en Cloud & DevOps Engineering, passionné par l’automatisation, l’infrastructure cloud, la conteneurisation et l’observabilité.
-J’aime construire des plateformes fiables, scalables et monitorées, en combinant CI/CD, Cloud, Docker/Kubernetes et Monitoring avancé.
+## 🌟 À propos de moi
+Étudiant en **Cloud & DevOps Engineering**, passionné par l’automatisation, l’infrastructure cloud, la conteneurisation et l’observabilité.
 
-Je suis à la recherche d’une alternance Cloud/DevOps, où je pourrai contribuer à des projets concrets et renforcer mes compétences techniques.
+J’aime construire des plateformes fiables, scalables et monitorées, en combinant **CI/CD, Cloud, Docker/Kubernetes et Monitoring avancé**.
 
-🔹 Compétences Techniques
-DevOps & CI/CD
+Je suis actuellement à la recherche d’une **alternance Cloud/DevOps**, afin de contribuer à des projets concrets et développer davantage mes compétences.
 
-Jenkins, GitLab CI/CD
+---
 
-SonarQube, Nexus
+## 🛠️ Compétences Techniques
 
-Pipelines CI/CD de bout en bout
+### **⚙️ DevOps & CI/CD**
+- Jenkins, GitLab CI/CD  
+- SonarQube, Nexus  
+- Pipelines CI/CD complets  
+- Automatisation : build, test, déploiement  
 
-Automatisation des builds, tests, déploiements
+### **☁️ Cloud & Infrastructure**
+- OpenStack, AWS  
+- Terraform, Ansible  
+- Linux, Networking  
+- Infrastructure as Code (IaC)  
 
-Cloud & Infrastructure
+### **🐳 Containers & Orchestration**
+- Docker, Docker Hub  
+- Kubernetes (pods, deployments, services)  
 
-OpenStack, AWS
+### **📊 Monitoring & Observabilité**
+- Prometheus  
+- Grafana  
+- Alerting & logs  
 
-Terraform, Ansible
+### **💻 Développement**
+- Java, Spring Boot  
+- Angular  
+- Python, Bash  
+- MySQL, SQL  
 
-Linux, Networking
+---
 
-Infrastructure as Code & provisioning automatisé
+## 🚀 Projets Principaux
 
-Containers & Orchestration
+### **1️⃣ CI/CD Pipeline End-to-End**
+**Stack :** Jenkins, GitLab, Docker, SonarQube, Nexus, Spring Boot, Angular  
+- Build automatisé  
+- Analyse qualité  
+- Déploiement Dockerisé  
+- Monitoring complet via Prometheus & Grafana  
+- Architecture CI/CD professionnelle  
 
-Docker, Docker Hub
+---
 
-Kubernetes (bases, deployment, services)
+### **2️⃣ Monitoring & Observabilité**
+**Stack :** Prometheus, Grafana, Docker  
+- Création de dashboards temps réel  
+- Mise en place d’alerting  
+- Supervision CPU/RAM/latence API  
 
-Monitoring & Observabilité
+---
 
-Prometheus (metrics, alerting)
+### **3️⃣ Cloud Infrastructure Automation — OpenStack**
+**Stack :** Terraform, Ansible, OpenStack  
+- Provisioning automatique  
+- Déploiement App + DB  
+- Scripts Ansible pour configuration  
 
-Grafana (dashboards avancés)
+---
 
-Log analysis & application monitoring
+### **4️⃣ Plateforme Full-Stack Tutoriels**
+**Stack :** Spring Boot, Angular, MySQL  
+- API REST sécurisée  
+- Dashboard admin  
+- CI/CD GitLab  
 
-Développement
+---
 
-Backend : Java, Spring Boot
+### **5️⃣ Smart Irrigation System (IoT)**
+**Stack :** STM32, LoRa, Python  
+- Réduction consommation d’eau  
+- Transmission longue portée  
+- Monitoring en temps réel  
 
-Frontend : Angular
+---
 
-Scripting : Python, Bash
+## 🎓 Certifications
+- AWS Cloud Foundations  
+- AWS Cloud Operations  
+- Jenkins – KodeKloud  
+- Scrum Fundamentals  
+- CCNA Routing & Switching  
 
-Bases de données : MySQL, SQL, Oracle
+---
 
-🔹 Projets Principaux
-📌 1. Architecture CI/CD End-to-End
+## 📬 Contact
+📧 **Email :** salah.hmiden@esprit.tn  
+🔗 **LinkedIn :** https://linkedin.com/in/salah-hmiden  
+💼 **GitHub :** https://github.com/Hmiden  
 
-Stack : Jenkins, GitLab, Docker, SonarQube, Nexus, Spring Boot, Angular, MySQL
+---
 
-Pipeline automatisé : build → tests → analyse → artefact → déploiement
-
-Containerisation backend & frontend
-
-Analyse qualité du code + intégration Nexus
-
-Déploiement sur un environnement Dockerisé
-
-Monitoring complet via Prometheus & Grafana
-
-🔗 Démo, screenshots ou lien GitHub (à ajouter)
-
-📌 2. Monitoring & Observabilité d’Applications
-
-Stack : Prometheus, Grafana, Docker
-
-Supervision de services conteneurisés
-
-Création de dashboards temps réel (API response time, CPU, RAM…)
-
-Système d’alerting (email + seuils dynamiques)
-
-Analyse des métriques et logs
-
-🔗 Dashboards ou images (à ajouter)
-
-📌 3. Cloud Infrastructure Automation – OpenStack
-
-Stack : Terraform, Ansible, OpenStack
-
-Provisioning automatisé d’instances cloud
-
-Configuration automatique (Ansible)
-
-Déploiement d’environnement complet (App + DB)
-
-Monitoring cloud intégré
-
-📌 4. Plateforme Tutoriels (Full-Stack)
-
-Stack : Spring Boot, Angular, MySQL
-
-Système de filtrage avancé
-
-Authentification utilisateur
-
-API REST + interface moderne
-
-Pipeline CI/CD GitLab pour tests & déploiement
-
-🔗 Lien GitHub (si disponible)
-
-📌 5. Smart Irrigation System (IoT)
-
-Stack : STM32, LoRa, C/C++, Python
-
-Réduction de 30% de la consommation d’eau
-
-Transmission longue portée via LoRa
-
-Automatisation & alerting
-
-Monitoring en temps réel
-
-🔹 Certifications
-
-AWS Academy Cloud Foundations
-
-AWS Academy Cloud Operations
-
-Jenkins – KodeKloud
-
-Scrum Fundamentals
-
-CCNA Switching, Routing & Wireless
-
-🔹 Contact
-
-📧 Email : salah.hmiden@esprit.tn
-
-🔗 LinkedIn : linkedin.com/in/salah-hmiden
+<p align="center">✨ Merci pour votre visite !</p>
